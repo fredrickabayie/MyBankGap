@@ -15,27 +15,33 @@ function sendRequest ( url ) {
 $( function () {
    $("#addLocation_btn").click(function () {
 
-       var longitude, latitude, bank, area, type, url, response;
+       var longitude, latitude, bank, area, bankSelect, selectedBank, typeSelect, selectedType, url, response;
 
        longitude = encodeURI(document.getElementById("longitudeVal").value);
        latitude = encodeURI(document.getElementById("latitudeVal").value);
-       bank = encodeURI(document.getElementById("selected-bank").textContent);
+       bankSelect = document.getElementById("selected-bank");
+       selectedBank = encodeURI(bankSelect.options[bankSelect.selectedIndex].text);
        area = encodeURI(document.getElementById("areaName").value);
-       type = encodeURI(document.getElementById("selected-type").textContent);
+       typeSelect = document.getElementById("selected-type");
+       selectedType = encodeURI(typeSelect.options[typeSelect.selectedIndex].text);
 
        url = "http://cs.ashesi.edu.gh/~csashesi/class2016/fredrick-abayie/mobileweb/mybank/php/mybank.php" +
-           "?cmd=add_location&bankName="+bank+"&longitude="+longitude+"&latitude="+latitude+"&areaName="+area+"" +
-           "&type="+type;
+           "?cmd=add_location&bankName="+selectedBank+"&longitude="+longitude+"&latitude="+latitude+"&areaName="+area+"" +
+           "&type="+selectedType;
 
        console.log(url);
 
        response = sendRequest(url);
        if (response.result === 1) {
-           //alert(""+response.status);
-           document.getElementById("notification").textContent = response.status;
+           alert(""+response.status);
+           //document.getElementById("notification").textContent = response.status;
        } else {
-           //alert(""+response.status);
-           document.getElementById("notification").textContent = response.status;
+           alert(""+response.status);
+           //document.getElementById("notification").textContent = response.status;
        }
    });
+});
+
+$(document).ready(function() {
+    $('select').material_select();
 });
