@@ -18,29 +18,28 @@
 
 <body>
 
+<div class="col s12">
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">MyBank</a>
+            </div>
+        </nav>
+    </div>
+</div>
+
 <div class="container">
     <div class="row">
-        <div class="col s12">
-            <div class="navbar-fixed">
-                <nav>
-                    <div class="nav-wrapper">
-                        <a href="#!" class="brand-logo">MyBank</a>
-                    </div>
-                </nav>
-            </div>
-        </div>
-
-        <div class="row">
 
             <div class="col s12">
                 <ul class="tabs">
-                    <li class="tab col s3"><a class="active" href="#test1">Add</a></li>
-                    <li class="tab col s3"><a href="#test2">View</a></li>
+                    <li class="tab col s3"><a class="active" href="#addLocation">Add</a></li>
+                    <li class="tab col s3 viewLocation"><a href="#viewLocation">View</a></li>
                 </ul>
             </div>
 
             <!--Page to add a new location-->
-            <div id="test1" class="col s12">
+            <div id="addLocation" class="col s12">
 
                 <div class="row">
                     <form class="col s12">
@@ -48,12 +47,12 @@
                         <div class="row">
 
                             <div class="input-field col s12">
-                                <input id="longitudeVal" type="text" class="validate">
-                                <label for="longitudeVal">Longitude</label>
-                            </div>
-                            <div class="input-field col s12">
                                 <input id="latitudeVal" type="text" class="validate">
                                 <label for="latitudeVal">Latitude</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="longitudeVal" type="text" class="validate">
+                                <label for="longitudeVal">Longitude</label>
                             </div>
                             <div class="input-field col s12">
                                 <input id="areaName" type="text" class="validate">
@@ -89,13 +88,15 @@
             </div>
 
             <!--Page to view list of locations-->
-            <div id="test2" class="col s12">
-                Test 2
+            <div class="col s12">
+                <div class="row">
+                    <ul class="collection" id="view">
+
+                    </ul>
+                </div>
             </div>
 
         </div>
-
-    </div>
 </div>
 
 <!-- jQuery -->
