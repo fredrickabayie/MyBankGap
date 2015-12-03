@@ -2,9 +2,8 @@
 <widget xmlns="http://www.w3.org/ns/widgets"
         xmlns:gap="http://phonegap.com/ns/1.0"
         id="com.fredrickabayie.mybank"
-        versionCode="13"
-        version="1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://phonegap.com/ns/1.0 ">
+        versioncode="11"
+        version="1.0.0">
     <name>MyBankGap</name>
     <description>
         A platform to allow the admin to add new atm and bank locations.
@@ -12,6 +11,13 @@
     <author href="http://www.ashesi.edu.gh" email="fredrick.abayie@ashesi.edu.gh">
         Fredrick Abayie
     </author>
+
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+
+    <allow-navigtion href="*" />
+    <allow-intent href="*" />
+    <access origin="*" />
+
     <icon src="icon.png"/>
     <gap:splash src="splash.png"/>
 </widget>
