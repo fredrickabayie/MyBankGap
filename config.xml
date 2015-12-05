@@ -19,6 +19,6 @@
     <allow-intent href="*" />
     <access origin="*" />
 
-    <icon src="icon.png"/>
+    <icon src="assets/img/MyBank.png"/>
     <gap:splash src="splash.png"/>
 </widget>
