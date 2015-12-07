@@ -61,7 +61,7 @@ $(function () {
        if (response.result === 1) {
             for (index in response.locations) {
                 li += '<li class="collection-item avatar">';
-                li += '<img src="images/yuna.jpg" alt="" class="circle">';
+                li += '<img src="assets/img/MyBank.png" alt="" class="circle">';
                 li += '<span class="title">'+response.locations[index].area_name+'</span>';
                 li += '<p>'+response.locations[index].latitude+', '+response.locations[index].longitude+'<br>';
                 li += response.locations[index].type+', '+response.locations[index].bank_name+'</p>';
